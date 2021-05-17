@@ -62,4 +62,4 @@ parent(nastya,rita).
 parent(nastya,jordan).
 parent(nastya,lebron).
 parent(jones,yana).
-parent(daenerys,yana).
+
