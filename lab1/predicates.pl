@@ -30,6 +30,11 @@ grand_pa(X,Y):-parent(Z,Y),parent(X,Z),man(X).
 grand_ma(X,Y):-parent(Z,Y),parent(X,Z),woman(X).
 grand_mas(X):-grand_ma(Y,X),write(Y),nl,fail.
 
+% task 1.10
+grand_pa_and_son(X,Y):-grand_pa(X,Y),man(Y).
+grand_pa_and_son(X,Y):-grand_pa(Y,X),man(X).
+
+
 % task 1.11
 grand_ma_and_son(X,Y):-parent(X,Z),parent(Z,Y),woman(X),man(Y).
 grand_ma_and_son(X,Y):-parent(Y,Z),parent(Z,X),man(X),woman(Y).
