@@ -35,3 +35,13 @@ sumDigits(Num, Sum) :- Mod is Num mod 10, Num1 is Num div 10, sumDigits(Num1, Su
 sumDigits(0, CurSum, CurSum) :- !.
 sumDigits(Num, CurSum, Sum) :- Mod is Num mod 10, Num1 is Num div 10, CurSum1 is CurSum + Mod, sumDigits(Num1, CurSum1, Sum).
 sumDigitsN(Num, Sum) :- sumDigits(Num, 0, Sum).
+
+% task 9
+proiz(0,X):-X is 1,!.
+proiz(N,X):-N1 is N div 10,proiz(N1,X1),X is X1*(N mod 10).
+
+% task 10
+proiz(N,X):-p(N,1,X).
+proiz(0,X,X):-!.
+proiz(A,Sum,X):-Am is  mod 10,Ad is  div 10,S is Sum*Am, proiz(Ad,S,X).
+
