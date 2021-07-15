@@ -1,3 +1,4 @@
+% task 1
 append_list([], X, X).
 append_list([H|T1], X, [H|T2]) :- append_list(T1, X, T2).
 
