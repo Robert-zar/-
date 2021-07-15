@@ -18,3 +18,7 @@ sum_list_down([H|T], Sum):- sum_list_down([H|T], 0, Sum).
 % task 3
 sum_list_up([], 0) :- !.
 sum_list_up([H|T], Sum) :- sum_list_up(T, Sum1), Sum is Sum1 + H.
+
+% task 6
+min_list_up([H],H):-!.
+min_list_up([H|T],Min):-min_list_up(T,Min1), (H < Min1 -> Min is H;Min is Min1).
