@@ -43,4 +43,7 @@ pr_ein:- Houses=[_,_,_,_,_],
 		in_list(Houses,[_,japan,_,_,parlament]),
 		next_to([_,norway,_,_,_],[blue,_,_,_,_],Houses),
 
-
+		in_list(Houses,[_,WHO1,water,_,_]),
+		in_list(Houses,[_,WHO2,_,zebra,_]),
+		write(Houses),
+		write(WHO1),nl,write(WHO2).
