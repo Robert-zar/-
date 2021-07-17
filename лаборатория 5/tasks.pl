@@ -26,7 +26,8 @@ el_no(List,Num,El):-el_no(List,Num,1,El).
 el_no([H|_],Num,Num,H):-!.
 el_no([_|Tail],Num,Ind,El):-Ind1 is Ind+1,el_no(Tail,Num,Ind1,El).
 
-pr_ein:- Houses=[_,_,_,_,_],
+% task 1
+pr_houses:- Houses=[_,_,_,_,_],
 
 		in_list(Houses,[red,english,_,_,_]),
 		in_list(Houses,[_,spanish,_,dog,_]),
@@ -48,3 +49,19 @@ pr_ein:- Houses=[_,_,_,_,_],
 		in_list(Houses,[_,WHO2,_,zebra,_]),
 		write(Houses),
 		write(WHO1),nl,write(WHO2).
+		
+% task 2		
+pr_friends :- Friends=[_, _, _],
+
+		in_list(Friends,[belokurov,_]),
+		in_list(Friends,[chernov,_]),
+		in_list(Friends,[rizhov,_]),
+		in_list(Friends,[_,blond]),
+		in_list(Friends,[_,brunet]),
+		in_list(Friends,[_,red]),
+
+		not(in_list(Friends,[belokurov,blond])),
+		not(in_list(Friends,[chernov,brunet])),
+		not(in_list(Friends,[rizhov,red])),
+
+		write(Friends),!.
