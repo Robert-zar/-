@@ -59,8 +59,9 @@ pr_friends :- Friends=[_, _, _],
 		in_list(Friends,[_,blond]),
 		in_list(Friends,[_,brunet]),
 		in_list(Friends,[_,red]),
-
+	
 		not(in_list(Friends,[belokurov,blond])),
+		not(in_list(Friends,[belokurov,brunet])),
 		not(in_list(Friends,[chernov,brunet])),
 		not(in_list(Friends,[rizhov,red])),
 
