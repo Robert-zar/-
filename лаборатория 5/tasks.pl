@@ -84,18 +84,18 @@ pr_girlfriends:- Girlfriends=[_,_,_],
 		write(Girlfriends),!.
 		
 % task 4
-pr_friends:- Friends=[_,_,_],
+pr_profession:- Profession=[_,_,_],
 			
-	in_list(Friends,[ivanov,_,_]),
-	in_list(Friends,[borisov,_,_]),
-	in_list(Friends,[semenov,_,3]),			
-    	in_list(Friends,[_,slesar,1]),
-	in_list(Friends,[_,tokar,_]),
-	in_list(Friends,[_,svarka,_]),
+	in_list(Profession,[ivanov,_,_]),
+	in_list(Profession,[borisov,_,_]),
+	in_list(Profession,[semenov,_,3]),			
+    	in_list(Profession,[_,slesar,1]),
+	in_list(Profession,[_,tokar,_]),
+	in_list(Profession,[_,svarka,_]),
   		
-    	in_list(Friends,[_,_,2]),
+    	in_list(Profession,[_,_,2]),
     					
-    	not(in_list(Friends,[borisov,slesar,_])),
-    	not(in_list(Friends,[semenov,tokar,_])),
+    	not(in_list(Profession,[borisov,slesar,_])),
+    	not(in_list(Profession,[semenov,tokar,_])),
     			
-      write(Friends).
+         write(Profession).
