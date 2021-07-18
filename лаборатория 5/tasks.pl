@@ -99,3 +99,30 @@ pr_profession:- Profession=[_,_,_],
     	not(in_list(Profession,[semenov,tokar,_])),
     			
          write(Profession).
+
+% task 5
+pr_napitki :- Napitki =[_, _, _, _],
+
+		in_list(Napitki,[butylka,_]),
+		in_list(Napitki,[stakan,_]),
+		in_list(Napitki,[kuvshin,_]),
+		in_list(Napitki,[banka,_]),
+
+		in_list(Napitki,[_,moloko]),
+		in_list(Napitki,[_,limonad]),
+		in_list(Napitki,[_,kvas]),
+		in_list(Napitki,[_,voda]),
+
+                             not(in_list( Napitki,[butylka,moloko])),
+		not(in_list( Napitki,[butylka,voda])),
+
+		next_to([kuvshin,_],[_,limonad],Napitki),
+		next_to([_,limonad],[_,kvas], Napitki),
+
+		not(in_list(Napitki,[banka,limonad])),
+		not(in_list(Napitki,[banka,voda])),
+
+		next_to([banka,_],[stakan,_], Napitki),
+		next_to([banka,_],[_,moloko],Napitki),
+
+	write( Napitki),!.
