@@ -64,3 +64,21 @@ pr_friends:-Friends=[_,_,_],
     			not(in_list(Friends,[rizhov,red])),
     			not(in_list(Friends,[chernov,brunet])),
 		write(Friends).
+
+% task 3
+pr_girlfriends :- Girlfriends = [_, _, _],
+
+		in_list(Girlfriends, [_, white, _]),
+                             in_list(Girlfriends, [_, green, _]),
+                             in_list(Girlfriends, [_, blue, _]),
+		in_list(Girlfriends [_, _, white]),
+		in_list(Girlfriends, [_, _, green]),
+		in_list(Girlfriends, [_, _, blue]),
+		in_list(Girlfriends, [anya, _, _]),
+                             in_list(Girlfriends, [valya, _, _]),
+		in_list(Girlfriends, [natasha, _, green]),
+		
+		not(in_list(Girlfriends, [natasha, green, _])),
+		not(in_list(Girlfriends, [valya, white, white])),
+
+		write(Girlfriends), !.
