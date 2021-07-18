@@ -126,3 +126,27 @@ pr_napitki :- Napitki =[_, _, _, _],
 		next_to([banka,_],[_,moloko],Napitki),
 
 	write( Napitki),!.
+
+% task 6
+pr_talents:- Talents = [_,_,_,_],
+
+		in_list(Talents,[pavlov,_]),
+		in_list(Talents,[levickiy,_]),
+		in_list(Talents,[voronov,_]),
+		in_list(Talents,[saharov,_]),
+
+
+		in_list(Talents,[_,writer]),
+		in_list(Talents,[_,dancer]),
+		in_list(Talents,[_,artist]),
+		in_list(Talents,[_,singer]),
+
+		not(in_list(Talents,[voronov,singer])),
+		not(in_list(Talents,[levickiy,singer])),
+		not(in_list(Talents,[pavlov,writer])),
+		not(in_list(Talents,[pavlov,artist])),
+		not(in_list(Talents,[saharov,writer])),
+		not(in_list(Talents,[voronov,writer])),
+		not(in_list(Talents,[voronov,artist])),
+
+	write(Talents).
