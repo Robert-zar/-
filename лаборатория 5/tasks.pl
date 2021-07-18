@@ -51,18 +51,16 @@ pr_houses:- Houses=[_,_,_,_,_],
 		write(WHO1),nl,write(WHO2).
 		
 % task 2		
-pr_friends :- Friends=[_, _, _],
-
-		in_list(Friends,[belokurov,_]),
-		in_list(Friends,[chernov,_]),
-		in_list(Friends,[rizhov,_]),
-		in_list(Friends,[_,blond]),
-		in_list(Friends,[_,brunet]),
-		in_list(Friends,[_,red]),
-	
-		not(in_list(Friends,[belokurov,blond])),
-		not(in_list(Friends,[belokurov,brunet])),
-		not(in_list(Friends,[chernov,brunet])),
-		not(in_list(Friends,[rizhov,red])),
-
-		write(Friends),!.
+pr_friends:-Friends=[_,_,_],
+    
+    			in_list(Friends,[belokurov,_]),
+    			in_list(Friends,[chernov,_]),
+    			in_list(Friends,[rizhov,_]),
+    			in_list(Friends,[_,brunet]),
+			in_list(Friends,[_,red]),
+    			in_list(Friends,[_,blond]),
+			not(in_list(Friends,[belokurov,blond])),
+    			not(in_list(Friends,[belokurov,brunet])),
+    			not(in_list(Friends,[rizhov,red])),
+    			not(in_list(Friends,[chernov,brunet])),
+		write(Friends).
