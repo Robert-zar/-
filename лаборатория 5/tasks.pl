@@ -51,7 +51,7 @@ pr_houses:- Houses=[_,_,_,_,_],
 		write(WHO1),nl,write(WHO2).
 		
 % task 2		
-pr_friends:-Friends=[_,_,_],
+pr_friends:- Friends=[_,_,_],
     
     			in_list(Friends,[belokurov,_]),
     			in_list(Friends,[chernov,_]),
@@ -66,19 +66,19 @@ pr_friends:-Friends=[_,_,_],
 		write(Friends).
 
 % task 3
-pr_girlfriends :- Girlfriends = [_, _, _],
+pr_girlfriends:- Girlfriends=[_,_,_],
 
-		in_list(Girlfriends, [_, white, _]),
-                             in_list(Girlfriends, [_, green, _]),
-                             in_list(Girlfriends, [_, blue, _]),
-		in_list(Girlfriends [_, _, white]),
-		in_list(Girlfriends, [_, _, green]),
-		in_list(Girlfriends, [_, _, blue]),
-		in_list(Girlfriends, [anya, _, _]),
-                             in_list(Girlfriends, [valya, _, _]),
-		in_list(Girlfriends, [natasha, _, green]),
+		in_list(Girlfriends,[_,white,_]),
+                in_list(Girlfriends,[_,green,_]),
+                in_list(Girlfriends,[_,blue,_]),
+		in_list(Girlfriends,[_,_,white]),
+		in_list(Girlfriends,[_,_,green]),
+		in_list(Girlfriends,[_,_,blue]),
+		in_list(Girlfriends,[anya,_,_]),
+                in_list(Girlfriends,[valya,_,_]),
+		in_list(Girlfriends,[natasha,_,green]),
 		
-		not(in_list(Girlfriends, [natasha, green, _])),
-		not(in_list(Girlfriends, [valya, white, white])),
+		not(in_list(Girlfriends,[natasha,green,_])),
+		not(in_list(Girlfriends,[valya,white,white])),
 
-		write(Girlfriends), !.
+		write(Girlfriends),!.
